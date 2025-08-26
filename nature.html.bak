@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Circle Up Arrow</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .circle-arrow {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #198754; /* Bootstrap success green */
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .circle-arrow:hover {
+      background-color: #157347; /* Darker green */
+      transform: translateY(-3px);
+    }
+
+    /* Optional: Scroll to top fixed button */
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Scroll to Top Circle Button -->
+<div id="scrollTopBtn" onclick="scrollToTop()">
+  <div class="circle-arrow">
+    ↑
+  </div>
+</div>
+
+<script>
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
